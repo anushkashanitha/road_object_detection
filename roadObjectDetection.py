@@ -13,8 +13,8 @@ from ultralytics import YOLO
 model = YOLO('yolov8n.pt')  # You can use different model sizes like 'yolov8s.pt', 'yolov8m.pt', etc.
 
 # Load data from .npz files
-base_data = np.load('base.npz')
-test_data = np.load('test.npz')
+base_data = np.load('base_file.npz')
+test_data = np.load('test_file.npz')
 
 base_images = base_data["images"]
 base_gps = base_data["gps"]
