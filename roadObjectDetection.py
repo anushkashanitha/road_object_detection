@@ -7,14 +7,31 @@
 import sys
 import numpy as np
 import cv2
+import streamlit as st
 from ultralytics import YOLO
 
 # Load YOLOv8 model
 model = YOLO('yolov8n.pt')  # You can use different model sizes like 'yolov8s.pt', 'yolov8m.pt', etc.
 
+
+st.title('Upload and Process .npz File')
+
+uploaded_file = st.file_uploader("Choose a base.npz file", type="npz")
+
+if uploaded_file is not None:
+    base_data = np.load(uploaded_file)
+
+st.title('Upload and Process .npz File')
+
+uploaded_file = st.file_uploader("Choose a test.npz file", type="npz")
+
+if uploaded_file is not None:
+    test_data = np.load(uploaded_file)
+    
+
 # Load data from .npz files
-base_data = np.load('base.npz')
-test_data = np.load('test.npz')
+#base_data = np.load('base.npz')
+#test_data = np.load('test.npz')
 
 base_images = base_data["images"]
 base_gps = base_data["gps"]
