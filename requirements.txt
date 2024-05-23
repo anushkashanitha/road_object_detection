@@ -1,6 +1,5 @@
 streamlit
 numpy
-opencv-python
 opencv-python-headless
 ultralytics
 libgl1-mesa-glx
