@@ -18,7 +18,7 @@ st.title('Upload and Process .npz File')
 
 uploaded_file1 = st.file_uploader("Choose a base.npz file", type="npz")
 
-if uploaded_file is not None:
+if uploaded_file1 is not None:
     base_data = np.load(uploaded_file1)
 else:
     uploaded_file1 = st.file_uploader("Choose a base.npz file", type="npz")
@@ -27,7 +27,7 @@ st.title('Upload and Process .npz File')
 
 uploaded_file2 = st.file_uploader("Choose a test.npz file", type="npz")
 
-if uploaded_file is not None:
+if uploaded_file2 is not None:
     test_data = np.load(uploaded_file2)
 else:
     uploaded_file2 = st.file_uploader("Choose a test.npz file", type="npz")
